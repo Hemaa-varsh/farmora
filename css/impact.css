@@ -1,0 +1,95 @@
+/* ============================================
+   IMPACT.CSS — Big Numbers Section
+============================================ */
+
+.impact {
+  background: linear-gradient(135deg, var(--forest) 0%, var(--moss) 100%);
+  text-align: center;
+}
+
+.impact-inner {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* 4 equal columns for numbers */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.impact-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--amber);
+}
+
+.impact-label {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 0.3rem;
+}
+
+/* Quote at bottom of impact section */
+.impact-quote {
+  margin-top: 3rem;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  max-width: 600px;
+  margin-inline: auto;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .impact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+/* ============================================
+   FOOTER.CSS — Bottom Section
+============================================ */
+
+footer {
+  background: var(--dark);
+  border-top: 1px solid rgba(149, 213, 178, 0.1);
+  padding: 3rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--amber);
+}
+
+.footer-logo span {
+  color: var(--mint);
+}
+
+footer p {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-sub {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+}

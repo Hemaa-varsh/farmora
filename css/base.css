@@ -1,0 +1,113 @@
+/* ============================================
+   BASE.CSS — Colors, Fonts, Reset
+   
+   This file is the FOUNDATION.
+   Every other CSS file uses these variables.
+   Think of it like a paint palette —
+   you define colors here once, use everywhere.
+============================================ */
+
+/* 
+  CSS VARIABLES — Your color palette.
+  Change a color here → changes EVERYWHERE.
+  
+  How to use: color: var(--amber);
+*/
+:root {
+  --forest:  #1B4332;   /* Dark green — main background */
+  --moss:    #2D6A4F;   /* Medium green — cards */
+  --leaf:    #40916C;   /* Light green — accents */
+  --mint:    #95D5B2;   /* Pale green — text highlights */
+  --pale:    #D8F3DC;   /* Very light green — table rows */
+  --amber:   #F4A261;   /* Orange — buttons, numbers */
+  --clay:    #E76F51;   /* Dark orange — hover states */
+  --cream:   #FEFAE0;   /* Off white */
+  --dark:    #0D1B12;   /* Very dark green — page bg */
+  --white:   #FFFFFF;
+}
+
+/* 
+  RESET — Removes default browser styling.
+  box-sizing: border-box means padding is
+  INCLUDED in element width (much easier!).
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Smooth scrolling when clicking nav links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base page styles */
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--dark);
+  color: var(--white);
+  overflow-x: hidden; /* No horizontal scrollbar */
+}
+
+/* 
+  REUSABLE SECTION CLASSES
+  Used across problem, features, impact etc.
+*/
+section {
+  padding: 6rem 4rem;
+}
+
+/* Small orange label above headings */
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--amber);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* Big section headings */
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem); /* Responsive font size */
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+/* Subtitle text under headings */
+.section-sub {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+/* 
+  ANIMATIONS
+  fadeUp = element slides up while appearing
+  fadeDown = slides down while appearing
+  spin = rotation (used for loading spinner)
+*/
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Mobile responsive — smaller padding on phones */
+@media (max-width: 768px) {
+  section {
+    padding: 4rem 1.5rem;
+  }
+}

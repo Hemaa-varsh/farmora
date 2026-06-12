@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Farmora — Smart Farmer Decision Engine</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <!-- 🎨 CSS FILES (order matters!) -->
+  <link rel="stylesheet" href="css/base.css">        <!-- Fonts, colors, reset -->
+  <link rel="stylesheet" href="css/navbar.css">      <!-- Top navigation bar -->
+  <link rel="stylesheet" href="css/hero.css">        <!-- Hero / landing section -->
+  <link rel="stylesheet" href="css/problem.css">     <!-- Problem stats section -->
+  <link rel="stylesheet" href="css/tool.css">        <!-- Farmora tool / form -->
+  <link rel="stylesheet" href="css/howit.css">       <!-- How it works steps -->
+  <link rel="stylesheet" href="css/features.css">    <!-- Feature cards -->
+  <link rel="stylesheet" href="css/impact.css">      <!-- Impact numbers -->    <!-- Footer -->
+</head>
+<body>
+
+  <!-- ============================
+       1. NAVIGATION BAR
+  ============================= -->
+  <nav>
+    <div class="logo">Farm<span>ora</span></div>
+    <ul>
+      <li><a href="#problem">Problem</a></li>
+      <li><a href="#tool">Try It</a></li>
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#impact">Impact</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('tool').scrollIntoView({behavior:'smooth'})">
+      Try Farmora →
+    </button>
+  </nav>
+
+  <!-- ============================
+       2. HERO SECTION
+  ============================= -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge">🌾 India's First Farmer Decision Engine</div>
+      <h1>Not just <span class="accent">information</span>.<br/>A <span class="accent2">decision</span>.</h1>
+      <p class="hero-sub">
+        Farmora empowers 140 million Indian farmers with AI-powered crop recommendations,
+        market timing, and government scheme matching — in their own language.
+      </p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="document.getElementById('tool').scrollIntoView({behavior:'smooth'})">
+          🌾 Get My Farm Advice
+        </button>
+        <button class="btn-outline" onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">
+          See How It Works
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">140M</div><div class="stat-label">Farming Families</div></div>
+        <div class="stat"><div class="stat-num">₹15K</div><div class="stat-label">Extra Income / Year</div></div>
+        <div class="stat"><div class="stat-num">6</div><div class="stat-label">Indian Languages</div></div>
+        <div class="stat"><div class="stat-num">2G</div><div class="stat-label">Works On</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       3. PROBLEM SECTION
+  ============================= -->
+  <section class="problem" id="problem">
+    <div class="problem-inner">
+      <div class="section-label">The Crisis</div>
+      <h2 class="section-title">The silent crisis<br/>nobody is solving</h2>
+      <p class="section-sub">Indian farmers make billion-rupee decisions with zero data.</p>
+      <div class="problem-grid">
+        <div class="prob-card">
+          <div class="prob-num">Every 30 min</div>
+          <h3>One farmer dies by suicide</h3>
+          <p>Due to debt and crop failures that could have been avoided with the right information.</p>
+          <div class="prob-source">— National Crime Records Bureau (NCRB)</div>
+        </div>
+        <div class="prob-card">
+          <div class="prob-num">70%</div>
+          <h3>Decide crops on neighbour's advice</h3>
+          <p>Most farmers rely on word-of-mouth instead of soil data or market demand analysis.</p>
+          <div class="prob-source">— ICRISAT Rural Survey</div>
+        </div>
+        <div class="prob-card">
+          <div class="prob-num">Only 25–30%</div>
+          <h3>Of price reaches the farmer</h3>
+          <p>Middlemen capture 70–75% of the value chain, leaving farmers in debt cycles.</p>
+          <div class="prob-source">— NITI Aayog Report</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       4. TOOL / FORM SECTION
+  ============================= -->
+  <section id="tool" class="tool-section-wrapper">
+    <div class="tool-section">
+      <div class="tool-header">
+        <div class="section-label">Try Farmora</div>
+        <h2 class="section-title">Get your personalized<br/>farm decision — now</h2>
+        <p class="section-sub">Enter your details. Farmora gives you 4 actionable decisions instantly.</p>
+      </div>
+      <div class="tool-card">
+        <div class="input-group">
+          <label>📍 YOUR STATE / REGION</label>
+          <select id="district">
+            <option value="">Select your state</option>
+            <option>Maharashtra</option>
+            <option>Tamil Nadu</option>
+            <option>Andhra Pradesh</option>
+            <option>Uttar Pradesh</option>
+            <option>Madhya Pradesh</option>
+            <option>Punjab</option>
+            <option>Karnataka</option>
+            <option>Rajasthan</option>
+            <option>Gujarat</option>
+            <option>West Bengal</option>
+            <option>Bihar</option>
+            <option>Odisha</option>
+          </select>
+        </div>
+        <div class="input-row">
+          <div class="input-group">
+            <label>🌱 CROP YOU GROW</label>
+            <select id="crop">
+              <option value="">Select crop</option>
+              <option>Rice (Paddy)</option>
+              <option>Wheat</option>
+              <option>Cotton</option>
+              <option>Sugarcane</option>
+              <option>Soybean</option>
+              <option>Maize (Corn)</option>
+              <option>Tomato</option>
+              <option>Onion</option>
+              <option>Potato</option>
+              <option>Groundnut</option>
+              <option>Turmeric</option>
+              <option>Chilli</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label>💧 SOIL TYPE</label>
+            <select id="soil">
+              <option value="">Select soil</option>
+              <option>Black (Cotton Soil)</option>
+              <option>Red Laterite</option>
+              <option>Alluvial</option>
+              <option>Sandy Loam</option>
+              <option>Clay</option>
+              <option>Mixed / Don't Know</option>
+            </select>
+          </div>
+        </div>
+        <div class="input-row">
+          <div class="input-group">
+            <label>💦 WATER AVAILABILITY</label>
+            <select id="water">
+              <option value="">Select</option>
+              <option>Irrigated (Canal / Borewell)</option>
+              <option>Rain-fed Only</option>
+              <option>Limited Irrigation</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label>🗣️ LANGUAGE</label>
+            <select id="language">
+              <option value="English">English</option>
+              <option value="Hindi">हिंदी (Hindi)</option>
+              <option value="Tamil">தமிழ் (Tamil)</option>
+              <option value="Telugu">తెలుగు (Telugu)</option>
+              <option value="Marathi">मराठी (Marathi)</option>
+              <option value="Kannada">ಕನ್ನಡ (Kannada)</option>
+            </select>
+          </div>
+        </div>
+        <button class="analyze-btn" onclick="analyzeData()">🔍 Analyze My Farm →</button>
+
+        <div id="loading">
+          <div class="loader"></div>
+          <p id="loading-text">Analyzing mandi prices, weather &amp; soil data...</p>
+        </div>
+
+        <div id="results">
+          <div class="results-divider">Your Farmora Report</div>
+          <div class="results-grid">
+            <div class="result-card highlight" id="r-sell">
+              <div class="result-icon">📈</div>
+              <h4>Sell Decision</h4>
+              <div class="result-value" id="sell-val">—</div>
+              <div class="result-detail" id="sell-detail">—</div>
+            </div>
+            <div class="result-card" id="r-crop">
+              <div class="result-icon">🌾</div>
+              <h4>Next Crop Suggestion</h4>
+              <div class="result-value" id="crop-val">—</div>
+              <div class="result-detail" id="crop-detail">—</div>
+            </div>
+            <div class="result-card" id="r-scheme">
+              <div class="result-icon">💰</div>
+              <h4>Govt. Scheme Match</h4>
+              <div class="result-value" id="scheme-val">—</div>
+              <div class="result-detail" id="scheme-detail">—</div>
+            </div>
+            <div class="result-card" id="r-weather">
+              <div class="result-icon">⛈️</div>
+              <h4>Weather Risk (7 Days)</h4>
+              <div class="result-value" id="weather-val">—</div>
+              <div class="result-detail" id="weather-detail">—</div>
+            </div>
+          </div>
+          <div id="report-time" style="margin-top:1rem; font-size:0.75rem; color:rgba(255,255,255,0.3); text-align:right;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       5. HOW IT WORKS
+  ============================= -->
+  <section class="how" id="how">
+    <div class="how-inner">
+      <div class="section-label">The Process</div>
+      <h2 class="section-title">Simple for farmers.<br/>Powerful under the hood.</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Enter Details</h3>
+          <p>Location, crop, soil type, water availability — done in under 60 seconds.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Data Analysis</h3>
+          <p>Cross-references mandi prices, IMD weather, soil health cards & scheme databases.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>AI Decision</h3>
+          <p>Generates 4 personalized decisions — sell timing, crop choice, scheme match, weather risk.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3>Act & Earn</h3>
+          <p>Farmer acts in their own language. Better decisions. Better prices. Better life.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       6. FEATURES
+  ============================= -->
+  <section class="features" id="features">
+    <div class="features-inner">
+      <div class="section-label">Why Farmora</div>
+      <h2 class="section-title">Built for the<br/>last-mile farmer</h2>
+      <div class="features-grid">
+        <div class="feat-card"><div class="feat-icon">🌐</div><h3>6 Indian Languages</h3><p>Hindi, Tamil, Telugu, Marathi, Kannada, Punjabi. Farmora speaks the farmer's language.</p></div>
+        <div class="feat-card"><div class="feat-icon">📶</div><h3>Works on 2G</h3><p>No app download needed. Works on any basic smartphone with minimal data.</p></div>
+        <div class="feat-card"><div class="feat-icon">📊</div><h3>Real Market Data</h3><p>Live mandi prices from Agmarknet, IMD weather forecasts, verified soil health cards.</p></div>
+        <div class="feat-card"><div class="feat-icon">🤖</div><h3>Decision Engine</h3><p>Farmora tells you what to DO — when to sell, what to grow, what scheme to apply for.</p></div>
+        <div class="feat-card"><div class="feat-icon">🏛️</div><h3>Scheme Matcher</h3><p>Matches farmers to PM-KISAN, Fasal Bima Yojana, and 20+ state government schemes.</p></div>
+        <div class="feat-card"><div class="feat-icon">🆓</div><h3>Completely Free</h3><p>Always free for farmers. No hidden charges. No data selling. Ever.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       7. IMPACT
+  ============================= -->
+  <section class="impact" id="impact">
+    <div class="impact-inner">
+      <div class="section-label">Our Vision</div>
+      <h2 class="section-title">The numbers that<br/>make this real</h2>
+      <div class="impact-grid">
+        <div><div class="impact-num">140M</div><div class="impact-label">Farming families in India</div></div>
+        <div><div class="impact-num">₹15K</div><div class="impact-label">Extra income / farmer / year</div></div>
+        <div><div class="impact-num">₹150Cr</div><div class="impact-label">Back to farmers at 1L scale</div></div>
+        <div><div class="impact-num">5</div><div class="impact-label">States targeted in Year 1</div></div>
+      </div>
+      <p class="impact-quote">"A farmer who knows when to sell, what to grow, and what they're entitled to — is a farmer who survives."</p>
+    </div>
+  </section>
+
+  <!-- ============================
+       8. FOOTER
+  ============================= -->
+  <footer>
+    <div class="footer-logo">Farm<span>ora</span></div>
+    <p class="footer-sub">Code. Collaborate. Create Impact.</p>
+  </footer>
+
+  <!-- ============================
+       JS FILE (always at bottom!)
+  ============================= -->
+  <script src="js/decisions.js"></script>   <!-- Decision engine data -->
+  <script src="config.js"></script>         <!-- API keys — NOT on GitHub! -->
+  <script src="js/app.js"></script>         <!-- Main logic -->
+
+</body>
+</html>

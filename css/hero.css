@@ -1,0 +1,157 @@
+/* ============================================
+   HERO.CSS — The Big Opening Section
+
+   This is the FIRST thing users see.
+   Key concepts used here:
+   - min-height: 100vh = full screen height
+   - radial-gradient = circular color fade
+   - position: relative/absolute = layering
+   - clamp() = font size that adapts to screen
+============================================ */
+
+.hero {
+  min-height: 100vh;       /* Full screen height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 2rem 4rem; /* Extra top padding for navbar */
+  position: relative;      /* Needed for absolute children */
+  overflow: hidden;
+}
+
+/* Background gradient layer (behind content) */
+.hero-bg {
+  position: absolute;
+  inset: 0;                /* Fills entire hero */
+  z-index: 0;              /* Behind everything */
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(45,106,79,0.35) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 80% 80%, rgba(244,162,97,0.12) 0%, transparent 60%),
+    var(--dark);
+}
+
+/* Content sits above background */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 860px;
+}
+
+/* Green pill badge at top of hero */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(149, 213, 178, 0.1);
+  border: 1px solid rgba(149, 213, 178, 0.25);
+  color: var(--mint);
+  padding: 0.4rem 1.1rem;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+  animation: fadeDown 0.7s ease both; /* Slides in from top */
+}
+
+/* Main big heading */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3.2rem, 8vw, 6rem); /* Min 3.2rem, max 6rem */
+  font-weight: 900;
+  line-height: 1.05;
+  color: var(--white);
+  animation: fadeUp 0.8s 0.1s ease both;
+}
+
+/* "information" in orange */
+h1 .accent  { color: var(--amber); }
+
+/* "decision" in mint green */
+h1 .accent2 { color: var(--mint); }
+
+/* Subtitle below heading */
+.hero-sub {
+  margin-top: 1.5rem;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  max-width: 620px;
+  margin-inline: auto; /* Center horizontally */
+  animation: fadeUp 0.8s 0.2s ease both;
+}
+
+/* Two buttons side by side */
+.hero-btns {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap; /* Wrap to next line on mobile */
+  animation: fadeUp 0.8s 0.3s ease both;
+}
+
+/* Orange filled button */
+.btn-primary {
+  background: var(--amber);
+  color: var(--forest);
+  border: none;
+  padding: 0.85rem 2rem;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 8px 30px rgba(244, 162, 97, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(244, 162, 97, 0.45);
+}
+
+/* Outlined transparent button */
+.btn-outline {
+  background: transparent;
+  color: var(--mint);
+  border: 1.5px solid rgba(149, 213, 178, 0.4);
+  padding: 0.85rem 2rem;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-outline:hover {
+  border-color: var(--mint);
+  background: rgba(149, 213, 178, 0.08);
+}
+
+/* Stats row: 140M | ₹15K | 6 | 2G */
+.hero-stats {
+  margin-top: 4rem;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeUp 0.8s 0.4s ease both;
+}
+
+.stat { text-align: center; }
+
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--amber);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.2rem;
+  letter-spacing: 0.5px;
+}

@@ -1,0 +1,88 @@
+/* ============================================
+   NAVBAR.CSS — Top Navigation Bar
+
+   position: fixed → stays at top while scrolling
+   backdrop-filter → frosted glass blur effect
+   z-index: 100 → stays above everything else
+============================================ */
+
+nav {
+  position: fixed;       /* Sticks to top of screen */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;          /* Layer on top of all other elements */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.2rem 4rem;
+  background: rgba(13, 27, 18, 0.85);  /* Semi-transparent dark */
+  backdrop-filter: blur(12px);          /* Frosted glass effect */
+  border-bottom: 1px solid rgba(149, 213, 178, 0.1);
+}
+
+/* FARMORA logo text */
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--amber);
+  letter-spacing: -0.5px;
+}
+
+/* The "ora" part in mint color */
+.logo span {
+  color: var(--mint);
+}
+
+/* Remove bullet points from nav links */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+/* Nav link styling */
+nav ul a {
+  text-decoration: none;
+  color: var(--mint);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.2s; /* Smooth color change on hover */
+}
+
+nav ul a:hover {
+  color: var(--amber); /* Orange on hover */
+}
+
+/* "Try Farmora" button in nav */
+.nav-cta {
+  background: var(--amber);
+  color: var(--forest);
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 100px;  /* Pill shape */
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.nav-cta:hover {
+  transform: scale(1.05);
+  background: var(--clay);
+  color: white;
+}
+
+/* Hide nav links on mobile */
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem 1.5rem;
+  }
+  nav ul {
+    display: none;
+  }
+}

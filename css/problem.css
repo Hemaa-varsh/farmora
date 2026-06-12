@@ -1,0 +1,90 @@
+/* ============================================
+   PROBLEM.CSS — The 3 Stat Cards Section
+
+   Key concepts:
+   - display: grid → modern layout system
+   - grid-template-columns → defines columns
+   - transition + transform → hover animation
+   - border: 1px solid rgba() → subtle borders
+============================================ */
+
+/* Section background — forest green */
+.problem {
+  background: var(--forest);
+}
+
+/* Max width container, centered */
+.problem-inner {
+  max-width: 1100px;
+  margin: auto; /* Centers the container */
+}
+
+/* 
+  3-column grid layout
+  1fr means each column takes equal space
+*/
+.problem-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+}
+
+/* Individual stat card */
+.prob-card {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(149, 213, 178, 0.12);
+  border-radius: 16px;
+  padding: 2rem;
+  /* 
+    transition: what changes, how long, type
+    This makes hover animation smooth
+  */
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+/* Card lifts up on hover */
+.prob-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(244, 162, 97, 0.4);
+}
+
+/* Big number like "Every 30 min" */
+.prob-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--amber);
+  line-height: 1;
+}
+
+/* Card heading */
+.prob-card h3 {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  color: var(--mint);
+  font-weight: 600;
+}
+
+/* Card description text */
+.prob-card p {
+  margin-top: 0.5rem;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.6;
+}
+
+/* Small italic source text */
+.prob-source {
+  margin-top: 0.8rem;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.3);
+  font-style: italic;
+}
+
+/* Stack cards vertically on mobile */
+@media (max-width: 768px) {
+  .problem-grid {
+    grid-template-columns: 1fr; /* Single column */
+  }
+}
