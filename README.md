@@ -91,8 +91,8 @@ farmora/
 ## 👩‍💻 Developer
 
 **HEMAVARSHINI M**
-ECE Student
-RMD Engineering College
+* ECE Student | RMD Engineering College
+
 
 * **Email:** [hemavarsh14@gmail.com](mailto:hemavarsh14@gmail.com)
 * **LinkedIn:** [hemavarshini04](https://www.linkedin.com/in/hemavarshini04)
