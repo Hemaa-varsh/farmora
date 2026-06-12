@@ -54,20 +54,20 @@ It combines **live weather data**, **government mandi prices**, **soil health re
 ---
 
 ## 📁 Folder Structure
+
+```
 farmora/
-
-├── index.html          # Main HTML file
-
-├── css/
-
-│   └── style.css       # Stylesheet
-
-├── js/
-
-│   └── app.js          # Main JavaScript logic
-
-└── README.md           # Project documentation
-
+│
+├── 📄 index.html          → Main HTML file
+├── 📁 css/
+│   └── 🎨 style.css       → Stylesheet
+├── 📁 js/
+│   └── ⚙️ app.js          → Main JavaScript logic
+├── 📁 screenshots/
+│   ├── 🖼️ dashboard.png   → English screenshot
+│   └── 🖼️ dashboard-tamil.png → Tamil screenshot
+└── 📄 README.md           → Project documentation
+```
 ---
 
 ## 🚀 How to Use
