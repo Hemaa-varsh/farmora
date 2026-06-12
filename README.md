@@ -46,9 +46,11 @@ It combines **live weather data**, **government mandi prices**, **soil health re
 
 ## 📸 Screenshots
 
-### 🏠 FARMORA Dashboard
-![FARMORA Dashboard](screenshots/dashboard.png)
+### 🌐 English Version
+![FARMORA Dashboard - English](screenshots/dashboard.png)
 
+### 🗣️ Tamil Version — தமிழ் இல்
+![FARMORA Dashboard - Tamil](screenshots/dashboard-tamil.png)
 ---
 
 ## 📁 Folder Structure
