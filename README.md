@@ -5,7 +5,6 @@
 
 [![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_Farmora-orange?style=for-the-badge)](https://hemaa-varsh.github.io/farmora)
 [![GitHub](https://img.shields.io/badge/GitHub-Hemaa--varsh-green?style=for-the-badge&logo=github)](https://github.com/Hemaa-varsh/farmora)
-[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
 </div>
 
@@ -89,16 +88,11 @@ farmora/
 
 ---
 
-## 📄 License
-
-This project is licensed under the **MIT License** — feel free to use and build upon it!
-
----
 
 ## 👩‍💻 Developer
 
 **Hemavarshini M**
-First-Year ECE Student | AI & ML Enthusiast
+First-Year ECE Student
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/hemavarshini04)
 [![Email](https://img.shields.io/badge/Email-Contact-red?style=flat&logo=gmail)](mailto:hemavarsh14@gmail.com)
