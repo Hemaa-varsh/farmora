@@ -35,12 +35,11 @@ It combines **live weather data**, **government mandi prices**, **soil health re
 
 ## 🛠️ Tech Stack
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![Open-Meteo](https://img.shields.io/badge/API-Open--Meteo-blue?style=flat)
-![data.gov.in](https://img.shields.io/badge/API-data.gov.in-green?style=flat)
-
+* **Frontend:** HTML, CSS, JavaScript
+* **Data:** Ministry of Agriculture Soil Health Research, Open-Meteo Weather
+* **Languages:** English, Hindi, Tamil, Telugu, Kannada, Bengali
+* **Deployment:** GitHub Pages
+* **Architecture:** Serverless, no backend required
 ---
 
 ## 📸 Screenshots
@@ -91,12 +90,13 @@ farmora/
 
 ## 👩‍💻 Developer
 
-**Hemavarshini M**
-First-Year ECE Student
+**HEMAVARSHINI M**
+ECE Student
+RMD Engineering College
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/hemavarshini04)
-[![Email](https://img.shields.io/badge/Email-Contact-red?style=flat&logo=gmail)](mailto:hemavarsh14@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat&logo=github)](https://github.com/Hemaa-varsh)
+* **Email:** [hemavarsh14@gmail.com](mailto:hemavarsh14@gmail.com)
+* **LinkedIn:** [hemavarshini04](https://www.linkedin.com/in/hemavarshini04)
+* **GitHub:** [Hemaa-varsh](https://github.com/Hemaa-varsh)
 
 ---
 
