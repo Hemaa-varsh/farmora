@@ -10,7 +10,7 @@
 
 ---
 
-## 🧠 About FARMORA
+## 🎯 About FARMORA
 
 **FARMORA** is an AI-powered web application built for **rural Indian farmers** who lack access to real-time agricultural data and expert guidance.
 
@@ -91,6 +91,7 @@ farmora/
 ## 👩‍💻 Developer
 
 **HEMAVARSHINI M**
+
 ECE Student
 RMD Engineering College
 
